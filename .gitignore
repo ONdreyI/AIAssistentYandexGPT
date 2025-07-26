@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+.venv/
+venv/
+env/
+*.env
+
+# Editor/IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Docker
+Dockerfile.bak
+*.dockerignore
+
+# Logs and databases
+*.log
+*.sqlite3
+chroma_db/
+
+# Other
+.DS_Store
