@@ -4,27 +4,31 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-
-# Virtual environment
-.venv/
-venv/
 env/
+venv/
 *.env
+.env.*
 
-# Editor/IDE files
+# IDE
 .idea/
-*.iml
-*.ipr
-*.iws
+.vscode/
 
 # Docker
-Dockerfile.bak
+docker-compose.override.yml
 *.dockerignore
 
-# Logs and databases
+# Logs
 *.log
+app/logs/
+
+# Databases
 *.sqlite3
-chroma_db/
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Other
+*.swp
 .DS_Store
