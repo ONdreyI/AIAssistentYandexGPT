@@ -6,7 +6,7 @@ import aiofiles
 import jwt
 from fastapi import Cookie, HTTPException
 
-from app.config import settings
+from config import settings
 
 
 async def get_all_users():

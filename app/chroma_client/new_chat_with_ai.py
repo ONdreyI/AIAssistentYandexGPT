@@ -12,10 +12,10 @@ import json
 import asyncio
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from app.config import settings
-from app.llama_client import LlamaClient
-from app.yandexgpt_client import YandexGPT
-from app.chroma_client.yandex_client_async import AsyncYandexGPTWrapper
+from config import settings
+from llama_client import LlamaClient
+from yandexgpt_client import YandexGPT
+from chroma_client.yandex_client_async import AsyncYandexGPTWrapper
 
 
 class ChatWithAI:
