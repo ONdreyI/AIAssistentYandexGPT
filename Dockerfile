@@ -1,5 +1,5 @@
-# Используем базовый образ с Debian Bullseye
-FROM python:3.11-bullseye
+# Используем базовый образ с Debian Bookworm
+FROM python:3.11-bookworm
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
@@ -16,16 +16,13 @@ RUN apt-get update && apt-get install -y \
 # Копируем файл зависимостей
 COPY requirements.txt .
 
-# Устанавливаем torch отдельно, затем остальные зависимости
+# Устанавливаем torch отдельно, затем остальные зависимости, и очищаем кэш pip
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir torch==2.6.0 --extra-index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir -r requirements.txt --default-timeout=120 --retries 5 \
+    pip install --no-cache-dir -r requirements.txt --default-timeout=120 --retries 5 && \
     pip cache purge
 
-    
-
-
-# Копируем приложение
+# Копируем приложение и необходимые файлы
 COPY app/ .
 COPY users.json .
 COPY app/.env* .
