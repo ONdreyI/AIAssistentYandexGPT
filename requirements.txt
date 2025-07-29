@@ -40,6 +40,10 @@ langchain-chroma==0.2.2
 langchain-core==0.3.65
 langchain-huggingface==0.1.2
 langchain-text-splitters==0.3.7
+langchain-deepseek
+langchain-openai
+kubernetes
+onnxruntime
 langsmith==0.3.45
 loguru==0.7.3
 markdown-it-py==3.0.0
@@ -120,3 +124,4 @@ zstandard==0.23.0
 
 aiofiles~=24.1.0
 PyJWT~=2.10.1
+yandex_cloud_ml_sdk
