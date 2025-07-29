@@ -4,7 +4,7 @@ from typing import List
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from starlette.responses import JSONResponse
 
-from config import settings
+from app.config import settings
 
 router = APIRouter()
 

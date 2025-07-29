@@ -6,7 +6,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import json
 import os
 
-from config import settings
+from app.config import settings
+
 
 
 class ChromaVectorStore:
