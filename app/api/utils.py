@@ -1,12 +1,14 @@
 import json
 from datetime import datetime, timedelta
 from typing import Optional
+from loguru import logger
 
 import aiofiles
 import jwt
 from fastapi import Cookie, HTTPException
 
-from config import settings
+from app.config import settings
+
 
 
 async def get_all_users():
@@ -18,9 +20,12 @@ async def get_all_users():
 
 async def authenticate_user(login: str, password: str):
     users = await get_all_users()
+    logger.debug(f"Attempting to authenticate user: {login}")
     for user in users:
         if user["login"] == login and user["password"] == password:
+            logger.info(f"User {login} authenticated successfully.")
             return user
+    logger.warning(f"Authentication failed for user: {login}")
     return None
 
 

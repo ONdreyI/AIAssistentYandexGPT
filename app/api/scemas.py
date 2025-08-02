@@ -14,7 +14,7 @@ class AskResponse(BaseModel):
 
 class AskWithAIResponse(BaseModel):
     response: str
-    provider: Literal["deepseek", "chatgpt", "yandexgpt"] = "yandexgpt"
+    provider: Literal["deepseek", "chatgpt", "yandexgpt", "llama", "llama32"] = "yandexgpt"
     k: int = Field(default=5, description="Количество документов для поиска")
 
 

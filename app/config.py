@@ -17,7 +17,7 @@ class Config(BaseSettings):
     DOCS_AMVERA_PATH: str = os.path.join(BASE_DIR, "docs_amvera")
     PARSED_JSON_PATH: str = os.path.join(BASE_DIR, "parsed_json")
     STORAGE_CHROMA_PATH: str = os.path.join(BASE_DIR, "chroma_db")
-    STORAGE_COLLECTION_NAME: str = "amvera_docs"
+    STORAGE_COLLECTION_NAME: str = "storage_docs"
     MAX_CHUNK_SIZE: int = 512
     CHUNK_OVERLAP: int = 50
     LM_MODEL_NAME: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"

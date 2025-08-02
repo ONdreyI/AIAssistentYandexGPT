@@ -6,10 +6,10 @@ from fastapi.templating import Jinja2Templates
 from loguru import logger
 from fastapi.responses import StreamingResponse
 
-from api.scemas import AskResponse, AskWithAIResponse, SUserAuth
-from chroma_client.generate_chroma_db import ChromaVectorStore, get_vectorstore
-from chroma_client.ai_store import ChatWithAI
-from api.utils import authenticate_user, create_jwt_token, get_current_user
+from app.api.scemas import AskResponse, AskWithAIResponse, SUserAuth
+from app.chroma_client.generate_chroma_db import ChromaVectorStore, get_vectorstore
+from app.chroma_client.ai_store import ChatWithAI
+from app.api.utils import authenticate_user, create_jwt_token, get_current_user
 
 router = APIRouter()
 

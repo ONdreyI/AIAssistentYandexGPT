@@ -10,9 +10,9 @@ from loguru import logger
 import time
 import json
 
-from config import settings
-from llama_client import LlamaClient
-from chroma_client.yandex_client import YandexGPTWrapper
+from app.config import settings
+from app.chroma_client.llama_client import LlamaClient
+from app.chroma_client.yandex_client import YandexGPTWrapper
 
 
 class ChatWithAI:

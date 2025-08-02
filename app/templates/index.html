@@ -21,12 +21,19 @@
   <body>
     <div class="chat-container">
       <div class="chat-header">
-        <h1>Amvera Cloud Chat</h1>
+        <h1>Assistant Cloud Chat</h1>
         <div class="header-controls">
           <select class="provider-select" id="provider">
             <option value="deepseek">DeepSeek</option>
             <option value="chatgpt">ChatGPT</option>
+            <option value="yandexgpt">YandexGPT</option>
+            <option value="llama">Llama</option>
+            <option value="llama32">Llama32</option>
           </select>
+          <button class="btn btn-outline-primary" id="loginButton" onclick="window.location.href='/login'">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Войти
+          </button>
           <button class="btn btn-outline-danger" id="logoutButton">
             <i class="bi bi-box-arrow-right"></i>
             Выйти
