@@ -4,10 +4,10 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from app.api.upload_json import router as upload_router
-from app.api.add_json_to_chroma import router as add_json_router
-from app.chroma_client.generate_chroma_db import chroma_vectorstore
-from app.api.response_router import router as response_router
+from api.upload_json import router as upload_router
+from api.add_json_to_chroma import router as add_json_router
+from chroma_client.generate_chroma_db import chroma_vectorstore
+from api.response_router import router as response_router
 
 
 @asynccontextmanager

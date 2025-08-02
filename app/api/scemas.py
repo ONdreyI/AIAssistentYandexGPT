@@ -20,7 +20,7 @@ class AskWithAIResponse(BaseModel):
 
 class AskCombinedResponse(BaseModel):
     response: str
-    provider: Literal["yandexgpt", "llama", "llama32"] = "yandexgpt"
+    provider: Literal["deepseek", "chatgpt", "yandexgpt", "llama", "llama32"] = "yandexgpt"
     k: int = Field(default=5, description="Количество документов для поиска")
     include_documents: bool = Field(
         default=True, description="Включать ли документы в ответ"

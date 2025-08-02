@@ -5,9 +5,9 @@ import json
 from loguru import logger
 from langchain_core.documents import Document
 
-from app.config import settings
+from config import settings
 
-from app.chroma_client.generate_chroma_db import ChromaVectorStore
+from chroma_client.generate_chroma_db import ChromaVectorStore
 
 router = APIRouter()
 
